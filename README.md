@@ -1,4 +1,4 @@
-![](C:\Users\asfix\Downloads\hanoi.gif)
+![]((https://upload.wikimedia.org/wikipedia/commons/6/60/Tower_of_Hanoi_4.gif)
 
 Borrar y modificar a su gusto este README, pero antes utilizar estas condiciones de entrega del trabajo.
 
