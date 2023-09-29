@@ -3,17 +3,22 @@
 
 
 
-# Código programa
+# Código del programa
+---Declaración de datos---
+@ ---------------------------------------
+@	Data Section
+@ ---------------------------------------
+	
+	.data
+	.balign 4	
+string: .asciz  "move disk from %c to %c\n\0"
+peg1:	.int	'A'		@ name of Peg 1, must be a char
+peg2:	.int	'B'
+peg3:	.int	'C'
+n:	.int	4		@ number of disks to move
 
 
-![image](https://github.com/tectijuana/armexpos-covid/assets/105743084/7e1d526e-f580-4cc8-a340-d4dc4b98b093)
 
-
-![image](https://github.com/tectijuana/armexpos-covid/assets/105743084/d3e7f019-29fd-4e12-b7f1-1c5920bd243a)
-
-
-
-![image](https://github.com/tectijuana/armexpos-covid/assets/105743084/9d1dc6bb-a9f3-4bdf-9bf7-ae86cc9e85a7)
 
 
 
