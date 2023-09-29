@@ -37,41 +37,8 @@ Declarar un método con los parámetros n, Source, Dest, Extra) y abrir una cond
 
 # Dividir 9 entre 3
 
-.global main
+![image](https://github.com/tectijuana/armexpos-covid/assets/105743084/854b16e2-e1ef-41da-b313-9666943f9b0d)
 
-.func main
-
-.arm
-
-main:    	  ADR R5, thumbcode+1     //se asigna la dirección de la etiqueta thumbcode al registro 5
-
-		  MOV LR, PC              //se almacena la siguiente instrucción en el registro LR
-  
-		  BX R5                   //salto al registro r5
-
-exit:   	  MOV R0, R3
-
-		  MOV R7, #1
-  
-		  SWI 0
-
-.thumb
-
-thumbcode:    	  MOV R0, #9     //Se almacena el valor del numerador
-
-		  MOV R1, #3     //Se almacena el valor del denominador
-  
-		  MOV R3, #0     //Se utiliza como contador para saber cuantas veces cabe
-		
-loop:    	  ADD R3, #1    //Se aumenta el contador en 1
-
-		  SUB R0, R1    //Se resta valor del denominador al valor del numerador
-  
-		  BGE loop      //Se preguna se el resultado es un valor mayor o igual
-  
-		  SUB R3, #1    //Resultado de la división
-  
-		  BX LR	      //Retorno a al código principal
   
 # Ejecución del programa
 
