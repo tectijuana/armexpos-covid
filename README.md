@@ -35,100 +35,32 @@ Declarar un método con los parámetros n, Source, Dest, Extra) y abrir una cond
 ![image](https://github.com/tectijuana/armexpos-covid/assets/105743084/57e0c777-a0d9-4398-8b6f-5ef7d1a9b2fe)
 
 
+# Dividir 9 entre 3
 
-Tecnológico Nacional de México
-Instituto Tecnológico de Tijuana
+.global main
+.func main
+.arm
 
-Departamento de Sistemas y Computación
-Ingeniería en Sistemas Computacionales
+main:    	ADR R5, thumbcode+1     //se asigna la dirección de la etiqueta thumbcode al registro 5
+		MOV LR, PC              //se almacena la siguiente instrucción en el registro LR
+		BX R5                   //salto al registro r5
 
-Semestre:
-Febrero - Junio 2022
+exit:   	MOV R0, R3
+		MOV R7, #1
+		SWI 0
 
-Materia:
-Lenguajes de interfaz
+.thumb
+thumbcode:      MOV R0, #9     //Se almacena el valor del numerador
+		MOV R1, #3     //Se almacena el valor del denominador
+		MOV R3, #0     //Se utiliza como contador para saber cuantas veces cabe
+		
+loop:    	ADD R3, #1    //Se aumenta el contador en 1
+		SUB R0, R1    //Se resta valor del denominador al valor del numerador
+		BGE loop      //Se preguna se el resultado es un valor mayor o igual
+		SUB R3, #1    //Resultado de la división
+		BX LR	      //Retorno a al código principal
+  
+# Ejecución del programa
 
-Docente:
-M.C. Rene Solis Reyes 
+![image](https://github.com/tectijuana/armexpos-covid/assets/105743084/ac7f27d2-9434-4f31-9ed5-729692bd662c)
 
-Unidad:
-1
-
-Título del trabajo:
-Ejercicios ......
-
-Estudiante:
-.......
-
-
-	</p>
-
-</pre>
-
-<pre>
-
-	<p align=left>
-
-Repositorio en el cual se desarrollaron distintos ejercicios en el lenguaje de 
-programacion c++, tomados del libro "Problemas para resolver con computadora" 
-1ra edicion (1985), por el autor Donald D. Spencer. 
-
-Los ejercicios corresponden al capitulo 6 del libro, entre las paginas 77 a 86.
-Se realizaron 25 problemas debido a la entrega fuera del limite de tiempo.
-
-CONDICIONES:
-
-	EXTEMPORÁNEOS DE LA FECHA DE ENTREGA, despues del 25 de marzo y 1 segundo:
-
-	-Solo 25 problemas a resolver y están en aleatorio las condiciones de uso, 
-		algunos simples otros de recordar, etc. CAPITULO 6 en adelante.
-
-	-Agregar las indicaciones de los criterios de la rùbrica
-	
-RÚBRICA:
-
-        Todo problema es necesario siga el templete OBLIGATORIO para entregar el 
-		problema codificado, usted puede correr sus programas con su estilo 
-		pero ya que este funcionando, debe arreglarlo a presentación para su 
-		evaluación.
-
-        MODIFICAR LA PORTADA CON MARKDOWN Y ACTUALIZARLA, esta libre de cambiar 
-		todo.
-        Los archivos deben tener su extensión .CPP (no .txt, etc.)
-
-	Los problemas están en la relación siguiente:
-	
-	- 100% Sigue el templete proporcionado por el docente y corren 10 
-		Problemas (o si incremento en programas por supuesta dificultad) 
-		completamente en GITHUB Classroom (no repositorio personal),  los 
-		archivos deben tener su extensión .CPP (no .txt, .EXE, etc.) acomodados 
-		en dentro de un directorio  (sin acentos o simbolos) SOLO FUENTES, y 
-		modifica el README.md que sea una portada.
-	- 80% Sigue el templete proporcionado por el docente y corre 8 Problemas 
-		(o si incremento en programas por supuesta dificultad) completamente 
-		en GITHUB Classroom (no repositorio personal), los archivos deben 
-		tener su extensión .CPP (no .txt, etc.) acomodados en dentro de un 
-		directorio (sin acentos o simbolos) SOLO FUENTES, y modifica el 
-		README.md que sea una portada.
-	- 70% Sigue el templete proporcionado por el docente y corre 7 Problemas 
-		(o si incremento en programas por supuesta dificultad) completamente 
-		en GITHUB Classroom (no repositorio personal), los archivos deben 
-		tener su extensión .CPP (no .txt, etc.) acomodados en dentro de un 
-		directorio (sin acentos o simbolos) SOLO FUENTES, y modifica el 
-		README.md que sea una portada.
-	- 50 % EVITA Y NO USA el templete proporcionado por el docente sus Problemas 
-		(o si incremento en programas por supuesta dificultad) completamente 
-		en GITHUB Classroom (no repositorio personal) con mas de 7 problemas 
-		resueltos, los archivos NO tener su extensión .CPP y  puede o no estar 
-		acomodados en dentro de un directorio (sin acentos o simbolos) 
-		SOLO FUENTES, y modifica el README.md que sea una portada.
-
-ENTREGA:
-
-	URL del GitHub Classroom, y recuerde arreglar la PORTADA, quitar todos los 
-		elementos extras del templete, acomodarlo bien para su presentación 
-		solo lo necesario.
-
-	</p>
-
-</pre>
