@@ -49,13 +49,16 @@ Declarar un método con los parámetros n, Source, Dest, Extra) y abrir una cond
 
 .data
 
-string:	.asciz	"%d\n"
+string: 	.asciz	  "%d\n"
 
 @ CODE SECTION
 
 .text
+
 .extern printf
+
 .global main
+
 main:
 
 	@ primera ...
