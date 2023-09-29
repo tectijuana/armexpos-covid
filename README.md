@@ -19,17 +19,11 @@ Declarar un método con los parámetros n, Source, Dest, Extra) y abrir una cond
 ![image](https://github.com/tectijuana/armexpos-covid/assets/105743084/fb59efaa-0c47-4785-94ea-ec713f12744d)
 
 
+# Ejecución del programa
+
+![image](https://github.com/tectijuana/armexpos-covid/assets/105743084/57e0c777-a0d9-4398-8b6f-5ef7d1a9b2fe)
 
 
-
-
-
-
-![image](https://github.com/tectijuana/armexpos-covid/assets/105743084/0617d2e1-6115-4a75-ba2a-2532a3d236d7)
-
-
-
-	<p align=center>
 
 Tecnológico Nacional de México
 Instituto Tecnológico de Tijuana
