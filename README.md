@@ -1,6 +1,17 @@
 # Torres de Hanoi
 ![](https://upload.wikimedia.org/wikipedia/commons/6/60/Tower_of_Hanoi_4.gif)
 
+Las torres de Hanói es un rompecabezas matemático El propósito del rompecabezas es mover todos los discos a uno de los postes vacíos de forma que queden apilados preservando el orden inicial.
+
+Suponiendo que todos los n discos estén distribuidos en disposiciones válidas entre las clavijas; suponiendo que hay m discos superiores en una clavija de origen y que el resto de los discos son más grandes que m , por lo que pueden ignorarse con seguridad; para mover m discos desde una clavija de origen a una clavija de destino usando una clavija de repuesto , sin violar las reglas:
+
+1. Mueva m − 1 discos desde la fuente a la clavija de repuesto , mediante el mismo procedimiento de resolución general . Las reglas no se violan por suposición. Esto deja al disco m como disco superior en la clavija de origen.
+2. Mueva el disco m desde la clavija de origen a la de destino , lo que se garantiza que será un movimiento válido, según las suposiciones: un paso simple .
+3. Mueva los m − 1 discos que acabamos de colocar en el disco de repuesto, desde el repuesto hasta la clavija de destino mediante el mismo procedimiento de resolución general , de modo que queden colocados encima del disco m sin violar las reglas.
+4. El caso base es mover 0 discos (en los pasos 1 y 3), es decir, no hacer nada, lo que obviamente no viola las reglas.
+
+La solución completa de la Torre de Hanoi consiste entonces en mover n discos desde la clavija de origen A a la clavija de destino C, utilizando B como clavija de repuesto.
+
 
 
 # Código del programa
