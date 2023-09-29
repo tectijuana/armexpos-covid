@@ -44,3 +44,63 @@ Declarar un método con los parámetros n, Source, Dest, Extra) y abrir una cond
 
 ![image](https://github.com/tectijuana/armexpos-covid/assets/105743084/ac7f27d2-9434-4f31-9ed5-729692bd662c)
 
+
+@ DATA SECTION
+
+.data
+string:	.asciz	"%d\n"
+
+@ CODE SECTION
+
+.text
+.extern printf
+.global main
+main:
+	@ primera ...
+	push	{r0, r1}	@ almacenamiento de valores iniciales
+	mov 	r0, #3
+	mov 	r1, #2
+	add 	r2, r0, r1	@ (r0+r1)
+	mov 	r2, r2, LSR #1	@ (r0+r1)/2
+	mov 	r1, r2		@ impresion del resultado...
+	ldr 	r0, =string
+	bl	printf
+
+	@ segunda ...
+        mov     r0, #4
+        mov     r1, #6
+        add     r2, r0, r1
+        mov     r2, r2, LSR #1
+        mov     r1, r2
+        ldr     r0, =string
+        bl      printf
+
+	@ tercera ...
+        mov     r0, #7
+        mov     r1, #2
+        add     r2, r0, r1
+        mov     r2, r2, LSR #1
+        mov     r1, r2
+        ldr     r0, =string
+        bl      printf
+
+	@ cuarta ...
+        mov     r0, #0
+        mov     r1, #3
+        add     r2, r0, r1
+        mov     r2, r2, LSR #1
+        mov     r1, r2
+        ldr     r0, =string
+        bl      printf
+
+	@ quinta ...
+        mov     r0, #3
+        mov     r1, #5
+        add     r2, r0, r1
+        mov     r2, r2, LSR #1
+        mov     r1, r2
+        ldr     r0, =string
+        bl      printf
+	pop	{r0, r1}	@ recuperacion de estados iniciales para salir
+	bx	lr		@ BREAK
+
