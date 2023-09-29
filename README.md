@@ -4,20 +4,27 @@
 
 
 # Código del programa
+
 ---Declaración de datos---
 
 
 @ ---------------------------------------
+
 @	Data Section
+
 @ ---------------------------------------
 	
 	.data
 	.balign 4	
 string: .asciz  "move disk from %c to %c\n\0"
+
 peg1:	.int	'A'		@ name of Peg 1, must be a char
+
 peg2:	.int	'B'
 peg3:	.int	'C'
 n:	.int	4		@ number of disks to move
+
+
 @ ---------------------------------------
 @	Code Section
 @ ---------------------------------------
