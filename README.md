@@ -16,7 +16,7 @@
 	
 	.data
 	.balign 4	
-string: .asciz  "move disk from %c to %c\n\0"
+.string: .asciz  "move disk from %c to %c\n\0"
 
 peg1:	.int	'A'		@ name of Peg 1, must be a char
 
