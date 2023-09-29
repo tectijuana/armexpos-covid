@@ -45,7 +45,11 @@ Declarar un método con los parámetros n, Source, Dest, Extra) y abrir una cond
 ![image](https://github.com/tectijuana/armexpos-covid/assets/105743084/ac7f27d2-9434-4f31-9ed5-729692bd662c)
 
 
-@ DATA SECTION
+# Media aritmetica
+
+_Obtiene la media aritmetica de 5 pares de valores (truncado a enteros)_
+
+``` @ DATA SECTION ```
 
 .data
 
