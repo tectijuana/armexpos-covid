@@ -48,6 +48,7 @@ Declarar un método con los parámetros n, Source, Dest, Extra) y abrir una cond
 @ DATA SECTION
 
 .data
+
 string:	.asciz	"%d\n"
 
 @ CODE SECTION
@@ -56,7 +57,9 @@ string:	.asciz	"%d\n"
 .extern printf
 .global main
 main:
+
 	@ primera ...
+ 
 	push	{r0, r1}	@ almacenamiento de valores iniciales
 	mov 	r0, #3
 	mov 	r1, #2
