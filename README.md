@@ -51,19 +51,19 @@ _Obtiene la media aritmetica de 5 pares de valores (truncado a enteros)_
 
 ``` @ DATA SECTION ```
 
-.data
+``` .data ```
 
-string: 	.asciz	  "%d\n"
+``` string: 	.asciz	  "%d\n" ```
 
-@ CODE SECTION
+``` @ CODE SECTION ```
 
-.text
+``` .text ```
 
-.extern printf
+``` .extern printf ```
 
-.global main
+``` .global main ```
 
-main:
+``` main: ```
 
 	@ primera ...
  
@@ -113,4 +113,8 @@ main:
         bl      printf
 	pop	{r0, r1}	@ recuperacion de estados iniciales para salir
 	bx	lr		@ BREAK
+
+# Ejecución del programa
+
+![image](https://github.com/tectijuana/armexpos-covid/assets/105743084/616cfd8b-aa87-4ab4-a3bb-b7dd7a23f16c)
 
