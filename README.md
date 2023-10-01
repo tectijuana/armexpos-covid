@@ -132,6 +132,13 @@ Comencemos por la sección de datos de nuestro código. En esta parte, definimos
 	output: .asciz "Tu entrada: %d\n"
  
 **Sección de Código:**
+	.text
+	.global main
+	.extern printf
+	.extern scanf
+	
+	main: push {ip, lr} @ guardar la dirección de retorno + registro ficticio
+	                   @ para alineación
 1. Inicio de la función main: Iniciamos la función main y guardamos la dirección de retorno junto con un registro ficticio para asegurarnos de que todo esté alineado correctamente.
 
 main: push {ip, lr} @ guardar la dirección de retorno + registro ficticio
