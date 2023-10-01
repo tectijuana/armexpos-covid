@@ -118,7 +118,8 @@ _Obtiene la media aritmetica de 5 pares de valores (truncado a enteros)_
 
 ![image](https://github.com/tectijuana/armexpos-covid/assets/105743084/616cfd8b-aa87-4ab4-a3bb-b7dd7a23f16c)
 
-#Uso de la función C scanf () para la entrada del usuario
+# Uso de la función C scanf () para la entrada del usuario
+
 La función scanf se utiliza comúnmente para leer diferentes tipos de datos, como números enteros, números en punto flotante, caracteres y cadenas de caracteres, siguiendo un formato específico. 
 Sección de Datos:
 Comencemos por la sección de datos de nuestro código. En esta parte, definimos algunas cadenas y una variable que serán fundamentales para nuestro programa. La cadena "prompt" contiene el mensaje que se mostrará al usuario antes de que ingresen un número. La cadena "format" especifica cómo se debe leer el número (en este caso, como un entero %d). La variable num almacenará el número ingresado por el usuario, y la cadena "output" es el formato de salida que utilizaremos para mostrar el número ingresado.
