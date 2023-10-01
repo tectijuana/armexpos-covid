@@ -118,3 +118,36 @@ _Obtiene la media aritmetica de 5 pares de valores (truncado a enteros)_
 
 ![image](https://github.com/tectijuana/armexpos-covid/assets/105743084/616cfd8b-aa87-4ab4-a3bb-b7dd7a23f16c)
 
+#Uso de la función C scanf () para la entrada del usuario
+La función scanf se utiliza comúnmente para leer diferentes tipos de datos, como números enteros, números en punto flotante, caracteres y cadenas de caracteres, siguiendo un formato específico. 
+Sección de Datos:
+Comencemos por la sección de datos de nuestro código. En esta parte, definimos algunas cadenas y una variable que serán fundamentales para nuestro programa. La cadena "prompt" contiene el mensaje que se mostrará al usuario antes de que ingresen un número. La cadena "format" especifica cómo se debe leer el número (en este caso, como un entero %d). La variable num almacenará el número ingresado por el usuario, y la cadena "output" es el formato de salida que utilizaremos para mostrar el número ingresado.
+	.data
+	.balign 4
+	prompt: .asciz "Ingrese Datos> "
+	format: .asciz "%d"
+	num: .int 0
+	output: .asciz "Tu entrada: %d\n"
+Sección de Código:
+1. Inicio de la función main: Iniciamos la función main y guardamos la dirección de retorno junto con un registro ficticio para asegurarnos de que todo esté alineado correctamente.
+ 	main: push {ip, lr} @ guardar la dirección de retorno + registro ficticio
+   			    @ para alineación
+
+2. Mostrar el mensaje de entrada: Utilizamos la función printf() para mostrar el mensaje " > " al usuario. Esto es lo que verán antes de ingresar su número.
+	 ldr r0, =prompt @ imprimir el mensaje de entrada
+         bl printf
+
+3. Lectura del número: Aquí es donde entra en juego scanf(). Cargamos la dirección de la cadena de formato "format" en r0 y la dirección de la variable num en r1. Luego, llamamos a scanf(). Espera a que el usuario ingrese un número y lo almacena en la variable num.
+ 	ldr r0, =format @ llamar a scanf, y pasar la dirección del formato
+        ldr r1, =num    @ y la dirección de num en r0, y r1, respectivamente,
+        bl scanf        @ respectivamente.
+
+4. Mostrar el número ingresado: Ahora que tenemos el número en num, necesitamos mostrarlo al usuario. Para hacerlo, cargamos la dirección de num en r1, leemos su contenido y lo almacenamos en r1. Luego, cargamos la dirección de la cadena "output" en r0 y llamamos a printf(). Como resultado, el número ingresado se mostrará en la pantalla en el formato deseado.
+ 	ldr r1, =num    @ imprimir num formateado con la cadena de salida.
+        ldr r1, [r1]
+        ldr r0, =output
+        bl printf
+
+5. Fin de la función main: Finalmente, recuperamos la dirección de retorno y salimos de la función main.
+ 	pop {ip, pc}    @ recuperar la dirección de retorno en pc
+
