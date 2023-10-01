@@ -142,8 +142,8 @@ Comencemos por la sección de datos de nuestro código. En esta parte, definimos
 	                   @ para alineación
 1. Inicio de la función main: Iniciamos la función main y guardamos la dirección de retorno junto con un registro ficticio para asegurarnos de que todo esté alineado correctamente.
 
-main: push {ip, lr} @ guardar la dirección de retorno + registro ficticio
-@ para alineación
+		ldr r0, =prompt @ imprimir el mensaje de entrada
+		bl printf
 
 2. Mostrar el mensaje de entrada: Utilizamos la función printf() para mostrar el mensaje " > " al usuario. Esto es lo que verán antes de ingresar su número.
    
