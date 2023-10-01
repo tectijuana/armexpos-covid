@@ -132,6 +132,7 @@ Comencemos por la sección de datos de nuestro código. En esta parte, definimos
 	output: .asciz "Tu entrada: %d\n"
  
 **Sección de Código:**
+
 	.text
 	.global main
 	.extern printf
