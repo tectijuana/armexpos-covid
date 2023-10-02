@@ -47,12 +47,14 @@ Como tal al momento de iniciar y trabajar con un nuevo lenguaje de programacion 
 - LDR R1, =string: Carga la dirección de la etiqueta string en el registro R1. Esto establece el puntero a la cadena que se va a imprimir.
 - SWI 0: Genera una señal de interrupción al sistema operativo (syscall) para realizar la escritura en la salida estándar. El sistema operativo procesará esta llamada y escribirá la cadena en la pantalla.
 
-
-
 	MOV R7, #4 ###;- cargar el valor de datos que esta en esta posicion en la secuencia de instrucciones
+
 	MOV R0, #1 ###;- cargar el valor de datos que esta en esta posicion en la secuencia de instrucciones
+
 	MOV R2, #12 ###;- parametro
+
 	LDR R1, =string ###parametro y direccion de la cadena
+
 	SWI 0 ### señal de interrupcion al O.S.
 
 
