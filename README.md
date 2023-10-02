@@ -1,3 +1,33 @@
+#Hola mundo
+
+![](https://i.blogs.es/5ff5c1/hello_world/1366_2000.webp)
+
+Como tal al momento de iniciar y trabajar con un nuevo lenguaje de programacion o un nuevo entorno de desarrollo, es importanta saber que todo lo basico funciona de manera corrercta, uno de las mejores forma de trabajar en ello es usar el "hola mundo". El propósito principal de un programa "Hola Mundo" es demostrar cómo escribir, compilar y ejecutar un programa básico en un lenguaje de programación en particular o un entornor de desarrollo. 
+
+	#Codigo
+	"
+	# Title: Hola mundo en ARM					Filename: holamundo.s
+	# Author: ___________				Date: ___
+	# Description: Mostrar HOLA MUNDO
+	# Input: -
+	# Output: HOLA MUNDO
+
+	.global _start
+	############################# Code segment ####################################
+	_start:
+  	MOV R7, #4 ###;- cargar el valor de datos que esta en esta posicion en la secuencia de instrucciones
+  	MOV R0, #1 ###;- cargar el valor de datos que esta en esta posicion en la secuencia de instrucciones
+  	MOV R2, #12 ###;- parametro
+  	LDR R1, =string ###parametro y direccion de la cadena
+  	SWI 0 ### señal de interrupcion al O.S.
+  	MOV R7, #1 ### salir del programa y matar el proceso
+  	SWI 0 ### señal de interrupcion al O.S. para la terminacion
+	############################# Data segment ###################################
+  	.data
+	string:
+ 	.ascii "HOLA MUNDO" "
+  
+
 # Torres de Hanoi
 ![](https://upload.wikimedia.org/wikipedia/commons/6/60/Tower_of_Hanoi_4.gif)
 
