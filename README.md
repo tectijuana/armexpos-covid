@@ -42,9 +42,13 @@ Como tal al momento de iniciar y trabajar con un nuevo lenguaje de programacion 
 
 3.- En esta seccion se ejecunta un grupo de instrucciones:
 MOV R7, #4: Carga el valor 4 en el registro R7, que corresponde a la llamada al sistema para escribir en la salida estándar (stdout).
+
 MOV R0, #1: Carga el valor 1 en el registro R0, que es el descriptor de archivo para la salida estándar (stdout).
+
 MOV R2, #12: Carga el valor 12 en el registro R2. Este valor se utiliza como parámetro para indicar la longitud de la cadena que se va a imprimir.
+
 LDR R1, =string: Carga la dirección de la etiqueta string en el registro R1. Esto establece el puntero a la cadena que se va a imprimir.
+
 SWI 0: Genera una señal de interrupción al sistema operativo (syscall) para realizar la escritura en la salida estándar. El sistema operativo procesará esta llamada y escribirá la cadena en la pantalla.
 
 	MOV R7, #4 ###;- cargar el valor de datos que esta en esta posicion en la secuencia de instrucciones
